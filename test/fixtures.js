@@ -42,8 +42,47 @@ exports.context = {
   functionName: 'ask-custom-test-skill-default',
   memoryLimitInMB: '128',
   functionVersion: '$LATEST',
-  getRemainingTimeInMillis: () => {},
+  getRemainingTimeInMillis: () => { },
   invokeid: '17a34386-0ef6-11e9-aa83-57769004560a',
   awsRequestId: '17a34386-0ef6-11e9-aa83-57769004560a',
   invokedFunctionArn: 'arn:aws:lambda:us-east-1:433463207427:function:ask-custom-test-skill-default',
+};
+
+exports.response = {
+  version: 'string',
+  sessionAttributes: {
+    key: 'value',
+  },
+  response: {
+    outputSpeech: {
+      type: 'PlainText',
+      text: 'Plain text string to speak',
+      ssml: '<speak>SSML text string to speak</speak>',
+      playBehavior: 'REPLACE_ENQUEUED',
+    },
+    card: {
+      type: 'Standard',
+      title: 'Title of the card',
+      content: 'Content of a simple card',
+      text: 'Text content for a standard card',
+      image: {
+        smallImageUrl: 'https://url-to-small-card-image...',
+        largeImageUrl: 'https://url-to-large-card-image...',
+      },
+    },
+    reprompt: {
+      outputSpeech: {
+        type: 'PlainText',
+        text: 'Plain text string to speak',
+        ssml: '<speak>SSML text string to speak</speak>',
+        playBehavior: 'REPLACE_ENQUEUED',
+      },
+    },
+    directives: [
+      {
+        type: 'InterfaceName.Directive',
+      },
+    ],
+    shouldEndSession: true,
+  },
 };
