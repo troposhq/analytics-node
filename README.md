@@ -2,7 +2,6 @@
 
 A Node.js client for [Tropos](http://troposhq.com) — The easiest way to integrate analytics into any Alexa skill powered by Node.js.
 
-
 ## Installation
 
 ```bash
@@ -14,9 +13,7 @@ $ npm install @tropos/analytics-node
 
 ```javascript
 const Alexa = require('ask-sdk-core');
-const Tropos = require('@tropos/analytics-node');
-
-const tropos = new Tropos('write key');
+const tropos = require('@tropos/analytics-node')('write key');
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
