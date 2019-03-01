@@ -2,9 +2,7 @@
 /* eslint-disable  import/no-extraneous-dependencies */
 
 const Alexa = require('ask-sdk-core');
-const Tropos = require('../lib');
-
-const tropos = new Tropos('key');
+const tropos = require('../lib')('key');
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
